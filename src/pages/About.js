@@ -14,10 +14,18 @@ const About = () => {
             <h2>our story</h2>
             <div className='underline'></div>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-              optio, quia ab quos laborum atque, nemo unde vel commodi
-              excepturi, ex facere porro corrupti distinctio saepe. Quasi natus
-              illum earum.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+              porro rerum aliquam quo quaerat cupiditate dolore perferendis,
+              ipsum quam repudiandae doloribus nobis quod atque vero ducimus
+              aliquid id? Minima pariatur illo molestiae rerum laborum fugit
+              asperiores repudiandae tenetur voluptatem non dolores quae aut,
+              consequatur dignissimos. Sit eos, soluta quo corrupti id ipsum
+              numquam porro molestias ab harum. Porro illum laboriosam sunt enim
+              minima at cumque fugiat maxime tempore distinctio, voluptate
+              officiis recusandae nulla, laborum ea adipisci. Voluptates
+              quisquam similique velit voluptatibus quas ducimus sint libero
+              quam ea magni! Repellat perspiciatis aliquid accusantium provident
+              cupiditate ut harum deleniti! Corporis, dolores voluptates.
             </p>
           </div>
         </article>
