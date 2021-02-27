@@ -51,6 +51,7 @@ const SingleProduct = () => {
     reviews,
     id: sku,
     company,
+    images,
   } = product;
   return (
     <Wrapper>
@@ -60,7 +61,7 @@ const SingleProduct = () => {
           back to products
         </Link>
         <div className='product-center'>
-          <ProductImages />
+          <ProductImages images={images} />
           <section className='content'>
             <h2>{name}</h2>
             <Stars />
