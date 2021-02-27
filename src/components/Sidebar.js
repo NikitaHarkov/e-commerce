@@ -4,7 +4,7 @@ import logo from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 import { links } from '../utils/constants';
-import CartButtons from './cart/CartButtons';
+import CartButtons from './buttons/CartButtons';
 import { useProductContext } from '../context/products_context';
 
 const Sidebar = () => {

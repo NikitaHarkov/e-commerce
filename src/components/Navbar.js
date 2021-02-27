@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import logo from '../assets/logo.svg';
 import styled from 'styled-components';
 import { links } from '../utils/constants';
-import CartButtons from './cart/CartButtons';
+import CartButtons from './buttons/CartButtons';
 import { useProductContext } from '../context/products_context';
 
 const Navbar = () => {
