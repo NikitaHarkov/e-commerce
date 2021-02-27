@@ -45,7 +45,6 @@ export const ProductsProvider = ({ children }) => {
       dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products });
     } catch (err) {
       dispatch({ type: GET_PRODUCTS_ERROR });
-      console.error(err);
     }
   };
 
@@ -57,7 +56,6 @@ export const ProductsProvider = ({ children }) => {
       dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct });
     } catch (err) {
       dispatch({ type: GET_SINGLE_PRODUCT_ERROR });
-      console.error(err);
     }
   };
 

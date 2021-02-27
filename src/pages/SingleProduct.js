@@ -3,7 +3,16 @@ import { useParams, useHistory } from 'react-router-dom';
 import { useProductContext } from '../context/products_context';
 import { single_product_url as url } from '../utils/constants';
 import styled from 'styled-components';
-import { Loading, Error } from '../components';
+import { Link } from 'react-router-dom';
+import {
+  Loading,
+  Error,
+  PageHero,
+  ProductImages,
+  Stars,
+  AddToCart,
+} from '../components';
+import { formatPrice } from '../utils/helpers';
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -33,8 +42,49 @@ const SingleProduct = () => {
   if (error) {
     return <Error />;
   }
-
-  return <h2>SingleProduct page</h2>;
+  const {
+    name,
+    price,
+    description,
+    stock,
+    start,
+    reviews,
+    id: sku,
+    company,
+  } = product;
+  return (
+    <Wrapper>
+      <PageHero title={name} product />
+      <div className='section section-center'>
+        <Link to='/products' className='btn'>
+          back to products
+        </Link>
+        <div className='product-center'>
+          <ProductImages />
+          <section className='content'>
+            <h2>{name}</h2>
+            <Stars />
+            <h5 className='price'>{formatPrice(price)}</h5>
+            <p className='desc'>{description}</p>
+            <p className='info'>
+              <span>Avaiable : </span>
+              {stock > 0 ? 'In Stock' : 'out of stock'}
+            </p>
+            <p className='info'>
+              <span>SKU : </span>
+              {sku}
+            </p>
+            <p className='info'>
+              <span>Brand : </span>
+              {company}
+            </p>
+            <hr />
+            {stock > 0 && <AddToCart />}
+          </section>
+        </div>
+      </div>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.main`
