@@ -6,9 +6,11 @@ import styled from 'styled-components';
 import { links } from '../utils/constants';
 import CartButtons from './buttons/CartButtons';
 import { useProductContext } from '../context/products_context';
+import { useUserContext } from '../context/user_context';
 
 const Navbar = () => {
   const { openSidebar } = useProductContext();
+  const { myUser } = useUserContext();
   return (
     <NavContainer>
       <div className='nav-center'>
@@ -29,6 +31,11 @@ const Navbar = () => {
               </li>
             );
           })}
+          {myUser && (
+            <li>
+              <Link to='/checkout'>Checkout</Link>
+            </li>
+          )}
         </ul>
         <CartButtons />
       </div>

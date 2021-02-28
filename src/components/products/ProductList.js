@@ -1,6 +1,5 @@
 import React from 'react';
 import { useFilterContext } from '../../context/filter_context';
-import Loading from '../states/Loading';
 import ListView from './ListView';
 import GridView from './GridView';
 

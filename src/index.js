@@ -6,6 +6,7 @@ import { ProductsProvider } from './context/products_context';
 import { FilterProvider } from './context/filter_context';
 import { CartProvider } from './context/cart_context';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { UserProvider } from './context/user_context';
 ReactDOM.render(
   <Auth0Provider
     domain={process.env.REACT_APP_DOMAIN}
@@ -13,13 +14,15 @@ ReactDOM.render(
     redirectUri={window.location.origin}
     cacheLocation='localstorage'
   >
-    <ProductsProvider>
-      <FilterProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </FilterProvider>
-    </ProductsProvider>
+    <UserProvider>
+      <ProductsProvider>
+        <FilterProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </FilterProvider>
+      </ProductsProvider>
+    </UserProvider>
   </Auth0Provider>,
   document.getElementById('root')
 );

@@ -81,7 +81,6 @@ const cart_reducer = (state, action) => {
         total_amount: 0,
       }
     );
-    console.log(total_items);
     return { ...state, total_items, total_amount };
   }
 
