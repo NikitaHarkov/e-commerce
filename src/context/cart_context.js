@@ -5,6 +5,7 @@ import {
   TOGGLE_CART_ITEM_AMOUNT,
   CLEAR_CART,
   COUNT_CART_TOTALS,
+  ADD_TO_CART,
 } from '../actions';
 
 const initialState = {
@@ -19,11 +20,17 @@ const CartContext = React.createContext();
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const addToCart = (id, color, amount, product) => {
+    dispatch({ type: ADD_TO_CART, payload: { id, color, amount, product } });
+  };
+
   return (
-    <CartContext.Provider value={{ ...state }}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{ ...state, addToCart }}>
+      {children}
+    </CartContext.Provider>
   );
 };
 
 export const useCartContext = () => {
-  return useContext(CartContext.Provider);
+  return useContext(CartContext);
 };
