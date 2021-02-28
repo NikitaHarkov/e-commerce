@@ -15,6 +15,7 @@ import AddToCart from './products/product/AddToCart';
 import Filters from './products/Filters';
 import Sort from './products/Sort';
 import ProductList from './products/ProductList';
+import CartContent from './cart/CartContent';
 
 export {
   Navbar,
@@ -34,4 +35,5 @@ export {
   Filters,
   Sort,
   ProductList,
+  CartContent,
 };
