@@ -1,4 +1,3 @@
-import { act } from 'react-dom/test-utils';
 import {
   REMOVE_CART_ITEM,
   TOGGLE_CART_ITEM_AMOUNT,
